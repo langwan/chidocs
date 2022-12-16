@@ -1,9 +1,6 @@
 article {
   padding: 8px;
-  pre {
-    padding: 8px;
-    border-radius: 4px;
-  }
+
   h1 {
     margin: 2rem 0 0.5rem;
     font-size: 1.6rem;
@@ -19,3 +16,5 @@ article {
     margin: 0.5rem 0;
   }
 }
+@import "markup";
+@import "syntax";

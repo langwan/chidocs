@@ -1,7 +1,7 @@
 @media (max-width: 1200px) {
   .wrapper {
     header {
-      padding: 0 8px;
+      padding: 0 16px;
     }
     .menu {
       display: none;
@@ -9,7 +9,7 @@
     .toc {
       display: none;
     }
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, auto);
     grid-template-areas:
       "header"
       "main"

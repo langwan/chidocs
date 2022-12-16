@@ -13,9 +13,12 @@ a {
 }
 
 body {
+  background-color: #fff;
   color: #555;
   padding: 0;
   margin: 0;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 .wrapper {
   display: grid;

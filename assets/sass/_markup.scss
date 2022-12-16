@@ -1,0 +1,31 @@
+article {
+  .highlight-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    .highlight-bar-left {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 8px;
+      span {
+        color: #629755;
+      }
+    }
+    .highlight-bar-right {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 16px;
+    }
+  }
+  .highlight {
+    .chroma {
+      padding: 8px;
+      margin-top: 0;
+    }
+  }
+}

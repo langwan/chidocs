@@ -4,6 +4,15 @@
       <h1 class="single-title">
         {{- .Title -}}
       </h1>
+
+      <div class="post-meta-line">
+        {{- with .Site.Params.dateformat | default "2006-01-02" | .PublishDate.Format -}}
+            <i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="{{ . }}">{{ . }}</time>&nbsp;
+        {{- end -}}
+        <i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;约{{ .WordCount }}字&nbsp;
+
+
+    </div>
       {{ .Content }}
     </article>
   </main>

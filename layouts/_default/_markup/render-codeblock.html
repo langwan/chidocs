@@ -1,0 +1,17 @@
+
+{{ $inner := trim .Inner "\n" | safeHTML }}
+
+<div class="highlight-bar">
+    <div class="highlight-bar-left">
+        <i class="fa-solid fa-code"></i>
+        <span>{{.Type}}</span>
+    </div>
+    <div>{{.Attributes.title}}</div>
+    <div class="highlight-bar-right">
+        <i class="fa-regular fa-clone"></i>
+        {{with .Attributes.url}}
+        <a href="{{.}}" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+        {{end}}
+    </div>
+</div>
+{{ highlight $inner .Type  }}

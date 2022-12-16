@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html><head>
+
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>痴货发明家</title>
+
+  
+  
+  <link rel="stylesheet" href="/sass/style.css" ZgotmplZ />
+
+  
+
+  <link href="/lib/fontawesome-free/all.min.css"  rel="stylesheet" />
+</head>
+
+<body>
+    <div class="wrapper"><header>
+  <a class="header-title" href="/">
+    
+      <img class="logo" src="/images/logo.jpg" />
+    
+    痴货发明家</a
+  >
+
+  <div>
+    <a href="/posts">所有文章</a>
+    
+      
+        <a target="_blank" href="https://github.com/langwan"
+          ><i class="fab fa-github fa-fw" aria-hidden="true"></i
+        ></a>
+      
+    
+  </div>
+</header>
+<aside class="menu"></aside>
+  <main>
+    <article>
+      <h1 class="single-title">主题文档 - 安装部署</h1>
+
+      <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2022-12-16">2022-12-16</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;约81字&nbsp;
+
+
+    </div>
+      <p>hugo-theme-chi 是 hugo 的主题，所以我们必须先安装 hugo。</p>
+<h2 id="安装-hugo">安装 hugo</h2>
+<h3 id="使用-go-install">使用 go install</h3>
+
+
+
+<div class="highlight-bar">
+    <div class="highlight-bar-left">
+        <i class="fa-solid fa-code"></i>
+        <span>shell</span>
+    </div>
+    <div>安装脚本</div>
+    <div class="highlight-bar-right">
+        <i class="fa-regular fa-clone"></i>
+        
+    </div>
+</div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="nv">CGO_ENABLED</span><span class="o">=</span><span class="m">1</span> go install --tags extended github.com/gohugoio/hugo@latest</span></span></code></pre></div>
+<div class="details admonition note">
+    <div class="details-summary admonition-title">
+        <i class="icon fas fa-pencil-alt fa-fw" aria-hidden="true"></i>注意
+    </div>
+    <div class="details-content">
+        <div class="admonition-content">只能安装 extended 版本，因为只有这个版本可以解析 sass，我们的样式表使用了 sass。</div>
+    </div>
+</div>
+<h3 id="不同系统">不同系统</h3>
+<p>在不同操作系统上安装 hugo 可以参考官方文档页，实际上用 go install 安装是更舒服的选择。</p>
+<p><a href="https://gohugo.io/installation/">https://gohugo.io/installation/</a></p>
+<div class="details admonition note">
+    <div class="details-summary admonition-title">
+        <i class="icon fas fa-pencil-alt fa-fw" aria-hidden="true"></i>注意
+    </div>
+    <div class="details-content">
+        <div class="admonition-content">使用 go install 之外的方法安装，不一定是最新的版本。</div>
+    </div>
+</div>
+<h2 id="创建站点">创建站点</h2>
+<p>使用 hugo 自带的工具可以很方便的创建站点。</p>
+
+
+
+<div class="highlight-bar">
+    <div class="highlight-bar-left">
+        <i class="fa-solid fa-code"></i>
+        <span>shell</span>
+    </div>
+    <div>创建站点</div>
+    <div class="highlight-bar-right">
+        <i class="fa-regular fa-clone"></i>
+        
+    </div>
+</div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">hugo new site blog</span></span></code></pre></div>
+<p>创建站点之后初始化 git 代码系统。</p>
+<h2 id="安装主题">安装主题</h2>
+
+
+
+<div class="highlight-bar">
+    <div class="highlight-bar-left">
+        <i class="fa-solid fa-code"></i>
+        <span>shell</span>
+    </div>
+    <div></div>
+    <div class="highlight-bar-right">
+        <i class="fa-regular fa-clone"></i>
+        
+    </div>
+</div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="nb">cd</span> blog
+</span></span><span class="line"><span class="cl">git init
+</span></span><span class="line"><span class="cl">mkdir themes
+</span></span><span class="line"><span class="cl">git submodule add https://github.com/langwan/hugo-theme-chi.git themes/hugo-theme-chi</span></span></code></pre></div>
+<h2 id="配置">配置</h2>
+
+
+
+<div class="highlight-bar">
+    <div class="highlight-bar-left">
+        <i class="fa-solid fa-code"></i>
+        <span>shell</span>
+    </div>
+    <div></div>
+    <div class="highlight-bar-right">
+        <i class="fa-regular fa-clone"></i>
+        
+    </div>
+</div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">cp themes/hugo-theme-chi/exmapleSite/config.yaml .</span></span></code></pre></div>
+<h2 id="运行">运行</h2>
+
+
+
+<div class="highlight-bar">
+    <div class="highlight-bar-left">
+        <i class="fa-solid fa-code"></i>
+        <span>shell</span>
+    </div>
+    <div></div>
+    <div class="highlight-bar-right">
+        <i class="fa-regular fa-clone"></i>
+        
+    </div>
+</div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">hugo server -D</span></span></code></pre></div>
+<h2 id="新增文档">新增文档</h2>
+
+
+
+<div class="highlight-bar">
+    <div class="highlight-bar-left">
+        <i class="fa-solid fa-code"></i>
+        <span>shell</span>
+    </div>
+    <div></div>
+    <div class="highlight-bar-right">
+        <i class="fa-regular fa-clone"></i>
+        
+    </div>
+</div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">hugo new posts/my-first-post.md</span></span></code></pre></div>
+<h2 id="发布">发布</h2>
+
+
+
+<div class="highlight-bar">
+    <div class="highlight-bar-left">
+        <i class="fa-solid fa-code"></i>
+        <span>shell</span>
+    </div>
+    <div></div>
+    <div class="highlight-bar-right">
+        <i class="fa-regular fa-clone"></i>
+        
+    </div>
+</div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">hugo</span></span></code></pre></div>
+
+    </article>
+  </main>
+
+      <aside class="toc">
+  
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#安装-hugo">安装 hugo</a>
+      <ul>
+        <li><a href="#使用-go-install">使用 go install</a></li>
+        <li><a href="#不同系统">不同系统</a></li>
+      </ul>
+    </li>
+    <li><a href="#创建站点">创建站点</a></li>
+    <li><a href="#安装主题">安装主题</a></li>
+    <li><a href="#配置">配置</a></li>
+    <li><a href="#运行">运行</a></li>
+    <li><a href="#新增文档">新增文档</a></li>
+    <li><a href="#发布">发布</a></li>
+  </ul>
+</nav>
+  
+</aside>
+<footer>主题 - hugo-theme-chi | 2022 | Langwan</footer>
+</div>
+
+    
+    <script src="/lib/typeit/index.umd.js" defer></script>
+
+    
+    <script src="/js/main.js" defer></script>
+  </body>
+</html>

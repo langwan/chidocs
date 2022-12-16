@@ -1,0 +1,695 @@
+:root {
+  --header-height: 40px;
+  --highlight-background-color: #2b2b2b;
+  --highlight-font-color: #e0e7ed; }
+
+* {
+  box-sizing: border-box;
+  list-style: none; }
+
+html {
+  font-family: "system-ui, -apple-system, Segoe UI, Roboto, Emoji, Helvetica, Arial, sans-serif";
+  font-size: 16px; }
+
+a {
+  text-decoration: none; }
+
+body {
+  background-color: #fff;
+  color: #555;
+  padding: 0;
+  margin: 0;
+  word-wrap: break-word;
+  overflow-wrap: break-word; }
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr minmax(0, 280px) 800px minmax(0, 280px) 1fr;
+  grid-template-rows: 40px 1fr 40px;
+  grid-template-areas: "header header header header header" "left menu main toc right" "footer footer footer footer footer";
+  width: 100vw;
+  height: 100vh; }
+  .wrapper header {
+    grid-area: header;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 60px;
+    line-height: 40px; }
+  .wrapper main {
+    grid-area: main; }
+  .wrapper .menu {
+    grid-area: menu; }
+  .wrapper .toc {
+    grid-area: toc;
+    padding: 8px;
+    padding-top: 60px; }
+  .wrapper footer {
+    grid-area: footer;
+    text-align: center;
+    line-height: 40px; }
+
+#content {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh; }
+
+.paper {
+  width: 800px;
+  position: relative;
+  max-width: 800px;
+  width: 60%;
+  margin: 0 auto; }
+
+header .header-title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px; }
+  header .header-title .logo {
+    border-radius: 100%;
+    width: 24px;
+    height: 24px; }
+
+.home {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center; }
+  .home .home-profile .home-profile-avatar {
+    padding: 0.5rem; }
+    .home .home-profile .home-profile-avatar img {
+      border-radius: 100%;
+      width: 12rem;
+      height: auto;
+      -webkit-border-radius: 100%;
+      -moz-border-radius: 100%;
+      border-radius: 100%; }
+  .home .home-subtitle {
+    padding: 0.5rem;
+    font-size: 1.25rem; }
+
+article {
+  padding: 8px; }
+  article h1 {
+    margin: 2rem 0 0.5rem;
+    font-size: 1.6rem;
+    font-weight: bold;
+    line-height: 140%; }
+  article h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 1.2rem 0; }
+  article p {
+    margin: 0.5rem 0; }
+
+article .highlight-bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center; }
+  article .highlight-bar .highlight-bar-left {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 8px; }
+    article .highlight-bar .highlight-bar-left span {
+      color: #629755; }
+  article .highlight-bar .highlight-bar-right {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 16px; }
+
+article .highlight .chroma {
+  padding: 8px;
+  margin-top: 0; }
+
+article {
+  /* Background */
+  /* Other */
+  /* Error */
+  /* LineTableTD */
+  /* LineTable */
+  /* LineHighlight */
+  /* LineNumbersTable */
+  /* LineNumbers */
+  /* Keyword */
+  /* KeywordConstant */
+  /* KeywordDeclaration */
+  /* KeywordNamespace */
+  /* KeywordPseudo */
+  /* KeywordReserved */
+  /* KeywordType */
+  /* Name */
+  /* NameAttribute */
+  /* NameBuiltin */
+  /* NameBuiltinPseudo */
+  /* NameClass */
+  /* NameConstant */
+  /* NameDecorator */
+  /* NameEntity */
+  /* NameException */
+  /* NameFunction */
+  /* NameFunctionMagic */
+  /* NameLabel */
+  /* NameNamespace */
+  /* NameOther */
+  /* NameProperty */
+  /* NameTag */
+  /* NameVariable */
+  /* NameVariableClass */
+  /* NameVariableGlobal */
+  /* NameVariableInstance */
+  /* NameVariableMagic */
+  /* Literal */
+  /* LiteralDate */
+  /* LiteralString */
+  /* LiteralStringAffix */
+  /* LiteralStringBacktick */
+  /* LiteralStringChar */
+  /* LiteralStringDelimiter */
+  /* LiteralStringDoc */
+  /* LiteralStringDouble */
+  /* LiteralStringEscape */
+  /* LiteralStringHeredoc */
+  /* LiteralStringInterpol */
+  /* LiteralStringOther */
+  /* LiteralStringRegex */
+  /* LiteralStringSingle */
+  /* LiteralStringSymbol */
+  /* LiteralNumber */
+  /* LiteralNumberBin */
+  /* LiteralNumberFloat */
+  /* LiteralNumberHex */
+  /* LiteralNumberInteger */
+  /* LiteralNumberIntegerLong */
+  /* LiteralNumberOct */
+  /* Operator */
+  /* OperatorWord */
+  /* Punctuation */
+  /* Comment */
+  /* CommentHashbang */
+  /* CommentMultiline */
+  /* CommentSingle */
+  /* CommentSpecial */
+  /* CommentPreproc */
+  /* CommentPreprocFile */
+  /* Generic */
+  /* GenericDeleted */
+  /* GenericEmph */
+  /* GenericError */
+  /* GenericHeading */
+  /* GenericInserted */
+  /* GenericOutput */
+  /* GenericPrompt */
+  /* GenericStrong */
+  /* GenericSubheading */
+  /* GenericTraceback */
+  /* GenericUnderline */
+  /* TextWhitespace */ }
+  article .highlight-bar {
+    background-color: var(--highlight-background-color) !important;
+    padding-left: 8px;
+    padding-top: 8px;
+    padding-right: 8px;
+    color: var(--highlight-font-color);
+    font-size: 14px; }
+  article .highlight {
+    color: var(--highlight-font-color);
+    background-color: var(--highlight-background-color) !important; }
+    article .highlight pre {
+      overflow-x: auto; }
+  article a {
+    color: #a9b7c6; }
+  article .chroma {
+    color: var(--highlight-font-color); }
+  article .chroma .lntd {
+    vertical-align: top;
+    padding: 0;
+    margin: 0;
+    border: 0; }
+  article .chroma .lntable {
+    border-spacing: 0;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    width: auto;
+    overflow: auto;
+    display: block; }
+  article .chroma .hl {
+    display: block;
+    width: 100%;
+    background-color: #ffffcc; }
+  article .chroma .lnt {
+    margin-right: 0.4em;
+    padding: 0 0.4em 0 0.4em;
+    color: #7f7f7f; }
+  article .chroma .ln {
+    margin-right: 0.4em;
+    padding: 0 0.4em 0 0.4em;
+    color: #7f7f7f; }
+  article .chroma .k {
+    color: #ff79c6; }
+  article .chroma .kc {
+    color: #ff79c6; }
+  article .chroma .kd {
+    color: #8be9fd;
+    font-style: italic; }
+  article .chroma .kn {
+    color: #ff79c6; }
+  article .chroma .kp {
+    color: #ff79c6; }
+  article .chroma .kr {
+    color: #ff79c6; }
+  article .chroma .kt {
+    color: #8be9fd; }
+  article .chroma .na {
+    color: #50fa7b; }
+  article .chroma .nb {
+    color: #8be9fd;
+    font-style: italic; }
+  article .chroma .nc {
+    color: #50fa7b; }
+  article .chroma .nf {
+    color: #50fa7b; }
+  article .chroma .nl {
+    color: #8be9fd;
+    font-style: italic; }
+  article .chroma .nt {
+    color: #ff79c6; }
+  article .chroma .nv {
+    color: #8be9fd;
+    font-style: italic; }
+  article .chroma .vc {
+    color: #8be9fd;
+    font-style: italic; }
+  article .chroma .vg {
+    color: #8be9fd;
+    font-style: italic; }
+  article .chroma .vi {
+    color: #8be9fd;
+    font-style: italic; }
+  article .chroma .s {
+    color: #f1fa8c; }
+  article .chroma .sa {
+    color: #f1fa8c; }
+  article .chroma .sb {
+    color: #f1fa8c; }
+  article .chroma .sc {
+    color: #f1fa8c; }
+  article .chroma .dl {
+    color: #f1fa8c; }
+  article .chroma .sd {
+    color: #f1fa8c; }
+  article .chroma .s2 {
+    color: #f1fa8c; }
+  article .chroma .se {
+    color: #f1fa8c; }
+  article .chroma .sh {
+    color: #f1fa8c; }
+  article .chroma .si {
+    color: #f1fa8c; }
+  article .chroma .sx {
+    color: #f1fa8c; }
+  article .chroma .sr {
+    color: #f1fa8c; }
+  article .chroma .s1 {
+    color: #f1fa8c; }
+  article .chroma .ss {
+    color: #f1fa8c; }
+  article .chroma .m {
+    color: #bd93f9; }
+  article .chroma .mb {
+    color: #bd93f9; }
+  article .chroma .mf {
+    color: #bd93f9; }
+  article .chroma .mh {
+    color: #bd93f9; }
+  article .chroma .mi {
+    color: #bd93f9; }
+  article .chroma .il {
+    color: #bd93f9; }
+  article .chroma .mo {
+    color: #bd93f9; }
+  article .chroma .o {
+    color: #ff79c6; }
+  article .chroma .ow {
+    color: #ff79c6; }
+  article .chroma .c {
+    color: #6272a4; }
+  article .chroma .ch {
+    color: #6272a4; }
+  article .chroma .cm {
+    color: #6272a4; }
+  article .chroma .c1 {
+    color: #6272a4; }
+  article .chroma .cs {
+    color: #6272a4; }
+  article .chroma .cp {
+    color: #ff79c6; }
+  article .chroma .cpf {
+    color: #ff79c6; }
+  article .chroma .gd {
+    color: #ff5555; }
+  article .chroma .ge {
+    text-decoration: underline; }
+  article .chroma .gh {
+    font-weight: bold; }
+  article .chroma .gi {
+    color: #50fa7b;
+    font-weight: bold; }
+  article .chroma .go {
+    color: #44475a; }
+  article .chroma .gu {
+    font-weight: bold; }
+  article .chroma .gl {
+    text-decoration: underline; }
+
+.posts {
+  padding: 8px; }
+  .posts .posts-title {
+    text-align: right; }
+  .posts ul {
+    padding: 0; }
+  .posts .posts-list-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center; }
+
+@media (max-width: 1200px) {
+  .wrapper {
+    grid-template-columns: minmax(0, auto);
+    grid-template-areas: "header" "main" "footer"; }
+    .wrapper header {
+      padding: 0 16px; }
+    .wrapper .menu {
+      display: none; }
+    .wrapper .toc {
+      display: none; } }
+
+article {
+  padding: 8px; }
+  article h1 {
+    margin: 2rem 0 0.5rem;
+    font-size: 1.6rem;
+    font-weight: bold;
+    line-height: 140%; }
+  article h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 1.2rem 0; }
+  article p {
+    margin: 0.5rem 0; }
+
+article .highlight-bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center; }
+  article .highlight-bar .highlight-bar-left {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 8px; }
+    article .highlight-bar .highlight-bar-left span {
+      color: #629755; }
+  article .highlight-bar .highlight-bar-right {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 16px; }
+
+article .highlight .chroma {
+  padding: 8px;
+  margin-top: 0; }
+
+article {
+  /* Background */
+  /* Other */
+  /* Error */
+  /* LineTableTD */
+  /* LineTable */
+  /* LineHighlight */
+  /* LineNumbersTable */
+  /* LineNumbers */
+  /* Keyword */
+  /* KeywordConstant */
+  /* KeywordDeclaration */
+  /* KeywordNamespace */
+  /* KeywordPseudo */
+  /* KeywordReserved */
+  /* KeywordType */
+  /* Name */
+  /* NameAttribute */
+  /* NameBuiltin */
+  /* NameBuiltinPseudo */
+  /* NameClass */
+  /* NameConstant */
+  /* NameDecorator */
+  /* NameEntity */
+  /* NameException */
+  /* NameFunction */
+  /* NameFunctionMagic */
+  /* NameLabel */
+  /* NameNamespace */
+  /* NameOther */
+  /* NameProperty */
+  /* NameTag */
+  /* NameVariable */
+  /* NameVariableClass */
+  /* NameVariableGlobal */
+  /* NameVariableInstance */
+  /* NameVariableMagic */
+  /* Literal */
+  /* LiteralDate */
+  /* LiteralString */
+  /* LiteralStringAffix */
+  /* LiteralStringBacktick */
+  /* LiteralStringChar */
+  /* LiteralStringDelimiter */
+  /* LiteralStringDoc */
+  /* LiteralStringDouble */
+  /* LiteralStringEscape */
+  /* LiteralStringHeredoc */
+  /* LiteralStringInterpol */
+  /* LiteralStringOther */
+  /* LiteralStringRegex */
+  /* LiteralStringSingle */
+  /* LiteralStringSymbol */
+  /* LiteralNumber */
+  /* LiteralNumberBin */
+  /* LiteralNumberFloat */
+  /* LiteralNumberHex */
+  /* LiteralNumberInteger */
+  /* LiteralNumberIntegerLong */
+  /* LiteralNumberOct */
+  /* Operator */
+  /* OperatorWord */
+  /* Punctuation */
+  /* Comment */
+  /* CommentHashbang */
+  /* CommentMultiline */
+  /* CommentSingle */
+  /* CommentSpecial */
+  /* CommentPreproc */
+  /* CommentPreprocFile */
+  /* Generic */
+  /* GenericDeleted */
+  /* GenericEmph */
+  /* GenericError */
+  /* GenericHeading */
+  /* GenericInserted */
+  /* GenericOutput */
+  /* GenericPrompt */
+  /* GenericStrong */
+  /* GenericSubheading */
+  /* GenericTraceback */
+  /* GenericUnderline */
+  /* TextWhitespace */ }
+  article .highlight-bar {
+    background-color: var(--highlight-background-color) !important;
+    padding-left: 8px;
+    padding-top: 8px;
+    padding-right: 8px;
+    color: var(--highlight-font-color);
+    font-size: 14px; }
+  article .highlight {
+    color: var(--highlight-font-color);
+    background-color: var(--highlight-background-color) !important; }
+    article .highlight pre {
+      overflow-x: auto; }
+  article a {
+    color: #a9b7c6; }
+  article .chroma {
+    color: var(--highlight-font-color); }
+  article .chroma .lntd {
+    vertical-align: top;
+    padding: 0;
+    margin: 0;
+    border: 0; }
+  article .chroma .lntable {
+    border-spacing: 0;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    width: auto;
+    overflow: auto;
+    display: block; }
+  article .chroma .hl {
+    display: block;
+    width: 100%;
+    background-color: #ffffcc; }
+  article .chroma .lnt {
+    margin-right: 0.4em;
+    padding: 0 0.4em 0 0.4em;
+    color: #7f7f7f; }
+  article .chroma .ln {
+    margin-right: 0.4em;
+    padding: 0 0.4em 0 0.4em;
+    color: #7f7f7f; }
+  article .chroma .k {
+    color: #ff79c6; }
+  article .chroma .kc {
+    color: #ff79c6; }
+  article .chroma .kd {
+    color: #8be9fd;
+    font-style: italic; }
+  article .chroma .kn {
+    color: #ff79c6; }
+  article .chroma .kp {
+    color: #ff79c6; }
+  article .chroma .kr {
+    color: #ff79c6; }
+  article .chroma .kt {
+    color: #8be9fd; }
+  article .chroma .na {
+    color: #50fa7b; }
+  article .chroma .nb {
+    color: #8be9fd;
+    font-style: italic; }
+  article .chroma .nc {
+    color: #50fa7b; }
+  article .chroma .nf {
+    color: #50fa7b; }
+  article .chroma .nl {
+    color: #8be9fd;
+    font-style: italic; }
+  article .chroma .nt {
+    color: #ff79c6; }
+  article .chroma .nv {
+    color: #8be9fd;
+    font-style: italic; }
+  article .chroma .vc {
+    color: #8be9fd;
+    font-style: italic; }
+  article .chroma .vg {
+    color: #8be9fd;
+    font-style: italic; }
+  article .chroma .vi {
+    color: #8be9fd;
+    font-style: italic; }
+  article .chroma .s {
+    color: #f1fa8c; }
+  article .chroma .sa {
+    color: #f1fa8c; }
+  article .chroma .sb {
+    color: #f1fa8c; }
+  article .chroma .sc {
+    color: #f1fa8c; }
+  article .chroma .dl {
+    color: #f1fa8c; }
+  article .chroma .sd {
+    color: #f1fa8c; }
+  article .chroma .s2 {
+    color: #f1fa8c; }
+  article .chroma .se {
+    color: #f1fa8c; }
+  article .chroma .sh {
+    color: #f1fa8c; }
+  article .chroma .si {
+    color: #f1fa8c; }
+  article .chroma .sx {
+    color: #f1fa8c; }
+  article .chroma .sr {
+    color: #f1fa8c; }
+  article .chroma .s1 {
+    color: #f1fa8c; }
+  article .chroma .ss {
+    color: #f1fa8c; }
+  article .chroma .m {
+    color: #bd93f9; }
+  article .chroma .mb {
+    color: #bd93f9; }
+  article .chroma .mf {
+    color: #bd93f9; }
+  article .chroma .mh {
+    color: #bd93f9; }
+  article .chroma .mi {
+    color: #bd93f9; }
+  article .chroma .il {
+    color: #bd93f9; }
+  article .chroma .mo {
+    color: #bd93f9; }
+  article .chroma .o {
+    color: #ff79c6; }
+  article .chroma .ow {
+    color: #ff79c6; }
+  article .chroma .c {
+    color: #6272a4; }
+  article .chroma .ch {
+    color: #6272a4; }
+  article .chroma .cm {
+    color: #6272a4; }
+  article .chroma .c1 {
+    color: #6272a4; }
+  article .chroma .cs {
+    color: #6272a4; }
+  article .chroma .cp {
+    color: #ff79c6; }
+  article .chroma .cpf {
+    color: #ff79c6; }
+  article .chroma .gd {
+    color: #ff5555; }
+  article .chroma .ge {
+    text-decoration: underline; }
+  article .chroma .gh {
+    font-weight: bold; }
+  article .chroma .gi {
+    color: #50fa7b;
+    font-weight: bold; }
+  article .chroma .go {
+    color: #44475a; }
+  article .chroma .gu {
+    font-weight: bold; }
+  article .chroma .gl {
+    text-decoration: underline; }
+
+article .admonition {
+  position: relative;
+  margin: 1rem 0;
+  padding: 0 0.75rem;
+  border-left: 0.25rem solid;
+  overflow: auto;
+  background-color: rgba(68, 138, 255, 0.1);
+  border-left-color: #448aff; }
+  article .admonition .admonition-title {
+    background-color: rgba(68, 138, 255, 0.1);
+    border-bottom-color: rgba(68, 138, 255, 0.1);
+    background-color: rgba(68, 138, 255, 0.25);
+    font-weight: bold;
+    margin: 0 -0.75rem;
+    padding: 0.25rem 1.8rem; }
+  article .admonition i.icon {
+    font-size: 0.85rem;
+    position: absolute;
+    top: 0.6rem;
+    left: 0.4rem; }
+  article .admonition .admonition-content {
+    padding: 0.5rem 0; }
