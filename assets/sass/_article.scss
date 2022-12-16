@@ -15,6 +15,7 @@ article {
   p {
     margin: 0.5rem 0;
   }
+  @include link(false, false);
 }
 @import "markup";
 @import "syntax";

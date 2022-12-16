@@ -32,6 +32,7 @@ header {
     align-items: center;
     gap: 16px;
   }
+  @include link(true, true);
 }
 
 @import "home";

@@ -5,16 +5,16 @@
     text-decoration: none;
 
     @if $light {
-      color: var(--global-link-color);
+      color: var(--global-link-color) !important;
     } @else {
-      color: var(--single-link-color);
+      color: var(--single-link-color) !important;
     }
 
     [theme="dark"] & {
       @if $dark {
-        color: var(--global-link-color-dark);
+        color: var(--global-link-color-dark) !important;
       } @else {
-        color: var(--single-link-color-dark);
+        color: var(--single-link-color-dark) !important;
       }
     }
   }
@@ -22,16 +22,16 @@
   a:active,
   a:hover {
     @if $light {
-      color: var(--global-link-hover-color);
+      color: var(--global-link-hover-color) !important;
     } @else {
-      color: var(--single-link-hover-color);
+      color: var(--single-link-hover-color) !important;
     }
 
     [theme="dark"] & {
       @if $dark {
-        color: var(--global-link-hover-color-dark);
+        color: var(--global-link-hover-color-dark) !important;
       } @else {
-        color: var(--single-link-hover-color-dark);
+        color: var(--single-link-hover-color-dark) !important;
       }
     }
   }
