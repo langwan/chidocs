@@ -1,0 +1,19 @@
+<header>
+  <a class="header-title" href="/">
+    {{ with resources.Get "images/logo.jpg" }}
+      <img class="logo" src="{{ .RelPermalink }}" />
+    {{ end }}
+    {{ .Site.Title }}</a
+  >
+
+  <div>
+    <a href="/posts">所有文章</a>
+    {{ range $key, $value := .Site.Params.Nav }}
+      {{ if eq $key "github" }}
+        <a target="_blank" href="{{ $value }}"
+          ><i class="fab fa-github fa-fw" aria-hidden="true"></i
+        ></a>
+      {{ end }}
+    {{ end }}
+  </div>
+</header>

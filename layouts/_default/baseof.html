@@ -1,11 +1,19 @@
 <!DOCTYPE html>
 <html>
-    {{- partial "head.html" . -}}
-    <body>
-        {{- partial "header.html" . -}}
-        <div id="content">
-        {{- block "main" . }}{{- end }}
-        </div>
-        {{- partial "footer.html" . -}}
-    </body>
+  {{- partial "head.html" . -}}
+  <body>
+    <div class="wrapper">
+      {{- partial "header.html" . -}}
+      <aside class="menu"></aside>
+      {{- block "main" . }}{{- end }}
+      {{ partial "toc.html" . }}
+      {{- partial "footer.html" . -}}
+    </div>
+
+    {{ $typeit := resources.Get "lib/typeit/index.umd.js" }}
+    <script src="{{ $typeit.RelPermalink }}" defer></script>
+
+    {{ $jsmain := resources.Get "js/main.js" }}
+    <script src="{{ $jsmain.RelPermalink }}" defer></script>
+  </body>
 </html>

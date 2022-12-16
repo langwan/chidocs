@@ -1,0 +1,18 @@
+@media (max-width: 1200px) {
+  .wrapper {
+    header {
+      padding: 0 8px;
+    }
+    .menu {
+      display: none;
+    }
+    .toc {
+      display: none;
+    }
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "header"
+      "main"
+      "footer";
+  }
+}

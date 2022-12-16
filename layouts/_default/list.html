@@ -1,0 +1,16 @@
+{{ define "main" }}
+  <main class="posts">
+    <h2 class="posts-title">所有文章</h2>
+    <ul>
+      <!-- Ranges through content/posts/*.md -->
+      {{ range .Pages }}
+        <li class="posts-list-item">
+          <a href="{{ .Permalink }}">{{- .Title | emojify -}}</a>
+          <span class="posts-list-item-date">
+            {{- $.Site.Params.list.dateFormat | default "01-02" | .Date.Format -}}
+        </span>
+        </li>
+      {{ end }}
+    </ul>
+  </main>
+{{ end }}

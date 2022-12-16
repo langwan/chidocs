@@ -1,0 +1,13 @@
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>{{ block "title" . }}{{ .Site.Title }}{{ end }}</title>
+
+  {{ $sass := resources.Get "sass/style.scss" }}
+  {{ $style := $sass | resources.ToCSS }}
+  <link rel="stylesheet" href="{{ $style.Permalink }}" />
+
+  {{ $fontawesome := resources.Get "lib/fontawesome-free/all.min.css" }}
+
+  <link href="{{ $fontawesome.RelPermalink }}" rel="stylesheet" />
+</head>

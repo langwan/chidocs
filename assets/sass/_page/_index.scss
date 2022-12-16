@@ -1,0 +1,32 @@
+#content {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+}
+
+.paper {
+  width: 800px;
+  position: relative;
+  max-width: 800px;
+  width: 60%;
+  margin: 0 auto;
+}
+
+header {
+  .header-title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+    .logo {
+      border-radius: 100%;
+      width: 24px;
+      height: 24px;
+    }
+  }
+}
+
+@import "home";
+@import "single";
+@import "list";

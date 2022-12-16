@@ -1,0 +1,9 @@
+theme: hugo-theme-chi
+themesDir: ../..
+title: 痴货发明家
+params:
+  home:
+    profile:
+      subtitle: 平凡而朴素的程序员
+  nav:
+    github: https://github.com/langwan

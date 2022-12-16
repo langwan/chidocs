@@ -1,0 +1,15 @@
+.posts {
+  padding: 8px;
+  .posts-title {
+    text-align: right;
+  }
+  ul {
+    padding: 0;
+  }
+  .posts-list-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}

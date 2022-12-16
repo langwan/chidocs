@@ -1,0 +1,17 @@
+{{ define "main" }}
+  <main class="home">
+    <div class="home-profile">
+      {{- $profile := .Site.Params.home.profile -}}
+      <div class="home-profile-avatar">
+        {{ with resources.Get "images/logo.jpg" }}
+          <img class="logo" src="{{ .RelPermalink }}" />
+        {{ end }}
+      </div>
+    </div>
+    {{- with $profile.subtitle -}}
+      <div class="home-subtitle">
+        {{- . | safeHTML -}}
+      </div>
+    {{- end -}}
+  </main>
+{{ end }}
