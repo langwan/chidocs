@@ -7,7 +7,7 @@
         <li class="posts-list-item">
           <a href="{{ .Permalink }}">{{- .Title | emojify -}}</a>
           <span class="posts-list-item-date">
-            {{- $.Site.Params.list.dateFormat | default "01-02" | .Date.Format -}}
+            {{- $.Site.Params.list.dateFormat | default "2006-01-02" | .Date.Format -}}
         </span>
         </li>
       {{ end }}

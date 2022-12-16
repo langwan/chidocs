@@ -5,4 +5,20 @@ $header-height: 40px;
   --highlight-background-color: #2b2b2b;
   --highlight-font-color: #e0e7ed;
   --global-spacing: 8px;
+
+  // Color of the link
+  --global-link-color: #161209;
+  --global-link-color-dark: #a9a9b3;
+
+  // Color of the hover link
+  --global-link-hover-color: #2d96bd;
+  --global-link-hover-color-dark: #fff;
+
+  // Color of the single link
+  --single-link-color: #2d96bd;
+  --single-link-color-dark: #55bde2;
+
+  // Color of the hover single link
+  --single-link-hover-color: #ef3982;
+  --single-link-hover-color-dark: #bdebfc;
 }

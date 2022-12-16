@@ -2,6 +2,7 @@
 title: "主题文档 - 安装部署"
 date: 2022-12-16T18:36:36+08:00
 lastmod: 2022-12-16T18:40:58+08:00
+weight: 1
 ---
 
 hugo-theme-chi 是 hugo 的主题，所以我们必须先安装 hugo。

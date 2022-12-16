@@ -7,6 +7,7 @@ params:
     profile:
       subtitle: 平凡而朴素的程序员
   nav:
+    bilibili: https://space.bilibili.com/401571418
     github: https://github.com/langwan
 markup:
   highlight:

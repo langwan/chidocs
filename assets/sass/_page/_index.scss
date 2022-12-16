@@ -25,6 +25,13 @@ header {
       height: 24px;
     }
   }
+  .header-menu {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row;
+    align-items: center;
+    gap: 16px;
+  }
 }
 
 @import "home";
