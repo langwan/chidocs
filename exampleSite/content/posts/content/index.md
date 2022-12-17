@@ -38,7 +38,7 @@ func main() {
 ### 脚本
 
 ```shell {title="安装脚本"}
-go install github.com/gohugoio/hugo@latest
+CGO_ENABLED=1 go install --tags extended github.com/gohugoio/hugo@latest
 ```
 
 ### 输出
