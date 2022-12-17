@@ -53,6 +53,12 @@ drwxr-xr-x   3 langwan  staff     96 12 16 05:50 resources
 -rw-r--r--@  1 langwan  staff   5178 12 17 07:16 syntax.css
 ```
 
+### github 代码
+
+```go {github="https://github.com/langwan/chigo/blob/main/Hello/main.go"}
+
+```
+
 ## 横幅
 
 {{< admonition >}}

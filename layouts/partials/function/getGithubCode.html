@@ -1,0 +1,36 @@
+
+{{ $url := . }}
+{{ $code := "" }}
+{{ $prefix := "" }}
+{{ $suffix := "" }}
+{{ $branch := "" }}
+{{ $api := "" }}
+{{ $repo := ""}}
+{{- if $url -}}
+    {{ $urls := split $url "/blob/" }}
+    {{ range $index, $sub := $urls}}
+
+    {{if eq $index  0 }}
+            {{ $repo = $sub}}
+            {{ $prefix = replace $sub "//github.com/"  "//api.github.com/repos/" }}
+    {{end}}
+
+    {{if eq $index  1 }}
+            {{$ss := split $sub "/"}}
+            {{range $ii, $s := $ss}}
+                {{if eq $ii 0}}
+                    {{$branch = $s}}
+                {{end}}
+            {{end}}
+            {{$suffix = replace $sub $branch "" 1}}
+    {{end}}
+    {{end}}
+
+
+    {{ $api = print $prefix "/contents" $suffix "?ref=" $branch}}
+    {{ $data := getJSON $api  }}
+    {{ $code = base64Decode $data.content }}
+
+{{- end -}}
+
+{{- return dict "code" $code "branch" $branch "repo" $repo "file" $suffix  -}}
