@@ -1,5 +1,6 @@
 theme: chidocs
 themesDir: ../..
+baseUrl: http://langwan.githubo.io/chidocs/
 title: 痴货发明家
 params:
   dateFormat: 2006-01-02
