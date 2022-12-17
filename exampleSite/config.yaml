@@ -1,4 +1,4 @@
-theme: hugo-theme-chi
+theme: chidocs
 themesDir: ../..
 title: 痴货发明家
 params:
@@ -12,4 +12,6 @@ params:
 markup:
   highlight:
     noClasses: false
+    tabWidth: 4
+    lineNos: true
 defaultContentLanguage: zh-cn

@@ -2,8 +2,8 @@ $header-height: 40px;
 
 :root {
   --header-height: 40px;
-  --highlight-background-color: #2b2b2b;
-  --highlight-font-color: #e0e7ed;
+  --highlight-background-color: rgb(245, 247, 249);
+  --highlight-font-color: rgba(59, 69, 78, 1);
   --global-spacing: 8px;
 
   // Color of the link
@@ -21,4 +21,8 @@ $header-height: 40px;
   // Color of the h over single link
   --single-link-hover-color: #ef3982;
   --single-link-hover-color-dark: #bdebfc;
+
+  --code-font-family: "Source Code Pro", Menlo, Monaco, Consolas,
+    "Liberation Mono", "Courier New", monospace;
+  --code-font-size: 0.875rem;
 }

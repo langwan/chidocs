@@ -10,9 +10,6 @@ article {
       justify-content: flex-start;
       align-items: center;
       gap: 8px;
-      span {
-        color: #629755;
-      }
     }
     .highlight-bar-right {
       display: flex;
@@ -22,10 +19,10 @@ article {
       gap: 16px;
     }
   }
-  .highlight {
-    .chroma {
-      padding: 8px;
+  .highlight-wrapper {
+    pre {
       margin-top: 0;
+      padding-bottom: 8px;
     }
   }
 }

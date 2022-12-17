@@ -15,6 +15,40 @@ article {
   p {
     margin: 0.5rem 0;
   }
+
+  dl dt {
+    font-weight: 700;
+    font-size: 1.125rem;
+    border-left: 2px solid rgb(26, 185, 69);
+    padding-left: 4px;
+  }
+
+  dd {
+    margin: 0.5em 0 2em;
+    padding: 0;
+  }
+
+  .post-meta {
+    font-size: 0.875rem;
+    color: #a9a9b3;
+  }
+  .highlight-wrapper {
+    margin: 0.5rem 0;
+  }
+
+  code {
+    display: inline-block;
+    max-width: 100%;
+    padding: 0 0.4rem;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    -webkit-line-break: anywhere;
+    -ms-line-break: anywhere;
+    line-break: anywhere;
+    font-size: var(--code-font-size);
+    font-family: var(--code-font-family);
+  }
+
   @include link(false, false);
 }
 @import "markup";
