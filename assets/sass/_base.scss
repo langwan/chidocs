@@ -16,6 +16,9 @@ body {
   word-wrap: break-word;
   overflow-wrap: break-word;
 }
+
+@include link(true, true);
+
 .wrapper {
   display: grid;
   grid-template-columns: 1fr minmax(0, 280px) 800px minmax(0, 280px) 1fr;
@@ -49,6 +52,37 @@ body {
 
     padding: 8px;
     padding-top: 60px;
+    display: block;
+
+    padding: 0 0.8rem;
+
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    box-sizing: border-box;
+
+    #TableOfContents {
+      border-left: 4px solid #f0f0f0;
+      ul {
+        text-indent: -0.85rem;
+        padding-left: 1.5rem;
+        list-style: none;
+
+        a:first-child::before {
+          content: "|";
+          font-weight: bolder;
+          margin-right: 0.5rem;
+          color: var(--single-link-color);
+
+          [theme="dark"] & {
+            color: var(--single-link-color-dark);
+          }
+        }
+
+        ul {
+          padding-left: 1.5rem;
+        }
+      }
+    }
   }
   footer {
     grid-area: footer;
