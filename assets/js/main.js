@@ -33,21 +33,34 @@ class Util {
 
 class Theme {
   constructor() {
-    this.config = window.config;
-    // this.data = this.config.data;
-    // this.isDark = document.body.getAttribute("theme") === "dark";
     this.util = new Util();
-    this.newScrollTop = this.util.getScrollTop();
-    this.oldScrollTop = this.newScrollTop;
-    this.scrollEventSet = new Set();
-    this.resizeEventSet = new Set();
-    this.switchThemeEventSet = new Set();
-    this.clickMaskEventSet = new Set();
-    if (window.objectFitImages) objectFitImages();
+  }
+
+  initHighlight() {
+    this.util.forEach(
+      document.querySelectorAll(".highlight-wrapper"),
+      (chrome) => {
+        console.log("code", chrome.querySelectorAll("code"));
+        const codeElement = chrome.querySelectorAll("code")[0];
+
+        const button = chrome.getElementsByClassName(
+          "highlight-copy-button"
+        )[0];
+        const code = codeElement.innerText;
+        console.log(button);
+        button.setAttribute("data-clipboard-text", code);
+        const clipboard = new ClipboardJS(button);
+        clipboard.on("success", (_e) => {
+          console.log("success", _e);
+          this.util.animateCSS(codeElement, "animate__flash");
+        });
+      }
+    );
   }
 
   init() {
     try {
+      this.initHighlight();
     } catch (err) {
       console.error(err);
     }

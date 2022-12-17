@@ -8,7 +8,11 @@
   <link rel="stylesheet" href="{{ $sass.RelPermalink }}" {{ printf "integrity=%q" $sass.Data.Integrity }} />
 
   {{ $fontawesome := resources.Get "lib/fontawesome-free/all.min.css" }}
-
   <link href="{{ $fontawesome.RelPermalink }}"  rel="stylesheet" />
+
+
+  {{ $animate := resources.Get "lib/animate/animate.min.css" }}
+  {{ $style := $animate | resources.Minify }}
+  <link rel="stylesheet" href="{{ $style.Permalink }}">
 </head>
 {{ $test := resources.Get "scss/test.scss"}}

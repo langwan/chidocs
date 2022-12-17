@@ -10,6 +10,9 @@
       {{- partial "footer.html" . -}}
     </div>
 
+    {{ $clipboard := resources.Get "lib/clipboard/clipboard.min.js"}}
+    <script src="{{ $clipboard.RelPermalink }}" defer></script>
+
     {{ $typeit := resources.Get "lib/typeit/index.umd.js" }}
     <script src="{{ $typeit.RelPermalink }}" defer></script>
 

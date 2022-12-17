@@ -13,5 +13,4 @@ markup:
   highlight:
     noClasses: false
     tabWidth: 4
-    lineNos: true
 defaultContentLanguage: zh-cn
