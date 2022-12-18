@@ -11,7 +11,7 @@ params:
     icon: "images/logo.png"
   nav:
     bilibili: https://space.bilibili.com/401571418
-    github: https://github.com/langwan
+    github: https://github.com/langwan/chidocs
 markup:
   highlight:
     noClasses: false
