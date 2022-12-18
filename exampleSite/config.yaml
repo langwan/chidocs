@@ -1,13 +1,14 @@
 theme: chidocs
 themesDir: ../..
 baseUrl: https://langwan.github.io/chidocs/
-title: 痴货发明家
+title: ChiDocs
 canonifyurls: true
 params:
   dateFormat: 2006-01-02
   home:
     profile:
-      subtitle: 平凡而朴素的程序员
+      subtitle: 一个简洁的 Hugo 主题
+    icon: "images/logo.png"
   nav:
     bilibili: https://space.bilibili.com/401571418
     github: https://github.com/langwan

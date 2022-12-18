@@ -3,7 +3,7 @@
     <div class="home-profile">
       {{- $profile := .Site.Params.home.profile -}}
       <div class="home-profile-avatar">
-        {{ with resources.Get "images/logo.jpg" }}
+        {{ with resources.Get "images/logo.png" }}
           <img class="logo" src="{{ .RelPermalink }}" />
         {{ end }}
       </div>

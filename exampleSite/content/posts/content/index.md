@@ -62,21 +62,111 @@ drwxr-xr-x   3 langwan  staff     96 12 16 05:50 resources
 ## 横幅
 
 {{< admonition >}}
-每天多喝一升水
+一个 **注意** 横幅
 {{< / admonition >}}
 
 {{< admonition abstract >}}
-每天多喝一升水
+一个 **摘要** 横幅
 {{< / admonition >}}
 
 {{< admonition  info >}}
-每天多喝一升水
+一个 **信息** 横幅
 {{< / admonition >}}
 
 {{< admonition tip >}}
-每天多喝一升水
+一个 **技巧** 横幅
 {{< / admonition >}}
+
+{{< admonition success >}}
+一个 **成功** 横幅
+{{< / admonition >}}
+
+{{< admonition question >}}
+一个 **成功** 横幅
+{{< / admonition >}}
+
+{{< admonition warning >}}
+一个 **成功** 横幅
+{{< / admonition >}}
+
+{{< admonition failure >}}
+一个 **成功** 横幅
+{{< / admonition >}}
+
+{{< admonition danger >}}
+一个 **成功** 横幅
+{{< / admonition >}}
+
+{{< admonition bug >}}
+一个 **成功** 横幅
+{{< / admonition >}}
+
+{{< admonition example >}}
+一个 **成功** 横幅
+{{< / admonition >}}
+
+{{< admonition quote >}}
+一个 **成功** 横幅
+{{< / admonition >}}
+
+```markdown
+{{</* admonition type=tip */>}}
+一个 **技巧** 横幅
+{{</* /admonition */>}}
+
+{{</* admonition abstract */>}}
+一个 **摘要** 横幅
+{{</* / admonition */>}}
+
+{{</* admonition  info */>}}
+一个 **信息** 横幅
+{{</* / admonition */>}}
+
+{{</* admonition tip */>}}
+一个 **技巧** 横幅
+{{</* / admonition */>}}
+
+{{</* admonition success */>}}
+一个 **技巧** 横幅
+{{</* / admonition */>}}
+
+{{</* admonition question */>}}
+一个 **成功** 横幅
+{{</* / admonition */>}}
+
+{{</* admonition warning */>}}
+一个 **成功** 横幅
+{{</* / admonition */>}}
+
+{{</* admonition failure */>}}
+一个 **成功** 横幅
+{{</* / admonition */>}}
+
+{{</* admonition danger */>}}
+一个 **成功** 横幅
+{{</* / admonition */>}}
+
+{{</* admonition bug */>}}
+一个 **成功** 横幅
+{{</* / admonition */>}}
+
+{{</* admonition example */>}}
+一个 **成功** 横幅
+{{</* / admonition */>}}
+
+{{</* admonition quote */>}}
+一个 **成功** 横幅
+{{</* / admonition */>}}
+```
 
 ## Bilibili
 
 {{< bilibili BV1EG411M7jP >}}
+
+## figure
+
+{{< figure src="./images/figure.jpg" title="雪国" >}}
+
+```markdown
+{{</* figure src="./images/figure.jpg" title="雪国" */>}}
+```

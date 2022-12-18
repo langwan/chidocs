@@ -13,7 +13,7 @@ article {
       background-color: rgba(68, 138, 255, 0.25);
       font-weight: bold;
       margin: 0 -0.75rem;
-      padding: 0.25rem 1.8rem;
+      padding: 0.25rem 2rem;
     }
     i.icon {
       color: #448aff;
@@ -63,6 +63,102 @@ article {
     }
     i.icon {
       color: #00bfa5;
+    }
+  }
+
+  .success {
+    background-color: rgba(0, 200, 83, 0.1);
+    border-left-color: #00c853;
+    .admonition-title {
+      background-color: rgba(0, 200, 83, 0.1);
+      background-color: rgba(0, 200, 83, 0.1);
+    }
+    i.icon {
+      color: #00c853;
+    }
+  }
+
+  .question {
+    background-color: rgba(100, 221, 23, 0.1);
+    border-left-color: #64dd17;
+    .admonition-title {
+      background-color: rgba(100, 221, 23, 0.1);
+      background-color: rgba(100, 221, 23, 0.1);
+    }
+    i.icon {
+      color: #64dd17;
+    }
+  }
+
+  .warning {
+    background-color: rgba(255, 145, 0, 0.1);
+    border-left-color: #ff9100;
+    .admonition-title {
+      background-color: rgba(255, 145, 0, 0.1);
+      background-color: rgba(255, 145, 0, 0.1);
+    }
+    i.icon {
+      color: #ff9100;
+    }
+  }
+
+  .failure {
+    background-color: rgba(255, 82, 82, 0.1);
+    border-left-color: #ff5252;
+    .admonition-title {
+      background-color: rgba(255, 82, 82, 0.1);
+      background-color: rgba(255, 82, 82, 0.1);
+    }
+    i.icon {
+      color: #ff5252;
+    }
+  }
+
+  .danger {
+    background-color: rgba(68, 138, 255, 0.1);
+    border-left-color: #ff1744;
+    .admonition-title {
+      background-color: rgba(68, 138, 255, 0.1);
+      background-color: rgba(68, 138, 255, 0.1);
+    }
+    i.icon {
+      color: #ff1744;
+    }
+  }
+
+  .bug {
+    background-color: rgba(255, 23, 68, 0.1);
+    border-left-color: #f50057;
+    .admonition-title {
+      background-color: rgba(255, 23, 68, 0.1);
+      background-color: rgba(255, 23, 68, 0.1);
+    }
+    i.icon {
+      color: #f50057;
+    }
+  }
+
+  .example {
+    background-color: rgba(101, 31, 255, 0.1);
+    border-left-color: #651fff;
+    .admonition-title {
+      background-color: rgba(101, 31, 255, 0.1);
+      background-color: rgba(101, 31, 255, 0.1);
+    }
+    i.icon {
+      color: #651fff;
+    }
+  }
+
+  .quote {
+    background-color: rgba(159, 159, 159, 0.1);
+    border-left-color: #9e9e9e;
+    .admonition-title {
+      background-color: rgba(159, 159, 159, 0.1);
+      background-color: rgba(159, 159, 159, 0.1);
+    }
+    i.icon {
+      color: #9e9e9e;
     }
   }
 
@@ -124,6 +220,22 @@ article {
 
       text-overflow: ellipsis;
       overflow: hidden;
+    }
+  }
+
+  figure {
+    margin: 0.5rem;
+    text-align: center;
+
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+      margin: 0 auto;
+      overflow: hidden;
+      border-style: none;
+      max-width: 100%;
+      min-height: 1em;
     }
   }
 }
