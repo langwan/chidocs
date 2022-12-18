@@ -49,6 +49,14 @@ article {
     font-family: var(--code-font-family);
   }
 
+  blockquote {
+    display: block;
+    border-left: 0.5rem solid #6bd6fd;
+    background-color: rgba(107, 214, 253, 0.2);
+    padding: 0.25rem 0.75rem;
+    margin: 1rem 0;
+  }
+
   @include link(false, false);
 }
 @import "markup";

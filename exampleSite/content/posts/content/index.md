@@ -217,10 +217,6 @@ drwxr-xr-x   3 langwan  staff     96 12 16 05:50 resources
 {{</* figure src="./images/figure.jpg" title="雪国" */>}}
 ```
 
-```
+## 应用
 
-```
-
-```
-
-```
+> Hugo is one of the most popular open-source static site generators. With its amazing speed and flexibility, Hugo makes building websites fun again.
