@@ -209,6 +209,10 @@ drwxr-xr-x   3 langwan  staff     96 12 16 05:50 resources
 
 {{< bilibili BV1EG411M7jP >}}
 
+```markdown
+{{</* bilibili BV1EG411M7jP /*>}}
+```
+
 ## figure
 
 {{< figure src="./images/figure.jpg" title="雪国" >}}
