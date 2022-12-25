@@ -1,23 +1,20 @@
 <header>
   <a class="header-title" href="/">
-    {{ with resources.Get "images/h.png" }}
-      <img class="logo" src="{{ .RelPermalink }}" />
-    {{ end }}
-    {{ .Site.Title }}</a
+    {{ with resources.Get .Site.Params.icon }}
+    <img class="logo" src="{{ .RelPermalink }}" />
+    {{ end }} {{ .Site.Title }}</a
   >
 
   <div class="header-menu">
     <a href="/posts">所有文章</a>
-    {{ range $key, $value := .Site.Params.Nav }}
-      {{ if eq $key "github" }}
-        <a target="_blank" href="{{ $value }}"
-          ><i class="fab fa-github fa-fw" aria-hidden="true"></i
-        ></a>
-      {{ end }}
-      {{ if eq $key "bilibili" }}
-        <a target="_blank" href="{{ $value }}"><i class="fa-brands fa-bilibili"></i></a>
-      {{ end }}
-
-    {{ end }}
+    {{ range $key, $value := .Site.Params.Nav }} {{ if eq $key "github" }}
+    <a target="_blank" href="{{ $value }}"
+      ><i class="fab fa-github fa-fw" aria-hidden="true"></i
+    ></a>
+    {{ end }} {{ if eq $key "bilibili" }}
+    <a target="_blank" href="{{ $value }}"
+      ><i class="fa-brands fa-bilibili"></i
+    ></a>
+    {{ end }} {{ end }}
   </div>
 </header>
