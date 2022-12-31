@@ -83,6 +83,9 @@ body {
         }
       }
     }
+    li {
+      padding-top: var(--global-spacing);
+    }
   }
   footer {
     grid-area: footer;

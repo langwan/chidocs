@@ -8,6 +8,7 @@
   }
   .posts-list-item {
     display: flex;
+    padding-top: var(--global-spacing);
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
