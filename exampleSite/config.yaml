@@ -9,6 +9,7 @@ params:
     profile:
       subtitle: 一个简洁的 Hugo 主题
     icon: "images/logo.png"
+    headerIcon: "images/h.png"
   nav:
     bilibili: https://space.bilibili.com/401571418
     github: https://github.com/langwan/chidocs

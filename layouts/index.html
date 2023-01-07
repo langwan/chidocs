@@ -1,15 +1,18 @@
 {{ define "main" }}
-<main class="home">
-  <div class="home-profile">
-    {{- $home := .Site.Params.home -}}
-    <div class="home-profile-avatar">
-      {{ with resources.Get $home.logo }}
-      <img class="logo" src="{{ .RelPermalink }}" />
-      {{ end }}
+  <main class="home">
+    <div class="home-profile">
+      {{- $profile := .Site.Params.home.profile -}}
+      <div class="home-profile-avatar">
+        {{ with resources.Get .Site.Params.home.icon  }}
+          <img class="logo" src="{{ .RelPermalink }}" />
+        {{ end }}
+      </div>
+      {{- with $profile.subtitle -}}
+      <div class="home-subtitle">{{- . | safeHTML -}}</div>
+      {{- end -}}
     </div>
   </div>
-  {{- with $home.profile.subtitle -}}
-  <div class="home-subtitle">{{- . | safeHTML -}}</div>
-  {{- end -}}
+
+
 </main>
 {{ end }}
